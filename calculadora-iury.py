@@ -4,11 +4,23 @@ print('d = divisão')
 print('a = adição')
 print('s = subtração')
 
-escolha = str(input('Digite uma das operações desejadas entre m,d,a,s'))
-digite_um_numero = int(input("Digite um Número: "))
-digite_mais_um = int(input("Digite um Número: "))
-m = digite_um_numero*digite_mais_um
-d = digite_um_numero/digite_mais_um
-a = digite_um_numero+digite_mais_um
-s = digite_um_numero-digite_mais_um
-print('a multiplicação é: {}, a divisão é: {}, a adição é: {}, a subtração é: {}'.format(m, d, a, s))
+escolha = input('Digite uma das operações desejadas entre m,d,a,s: ')
+digite_um_numero = float(input("Digite um Número: "))
+digite_mais_um = float(input("Digite um Número: "))
+if escolha == 'm':
+  result=digite_um_numero*digite_mais_um
+  print(f'Resultado:',{result})
+elif escolha == 'd':
+  if digite_mais_um != 0:
+    result=digite_um_numero/digite_mais_um
+    print('Resultado',{result})
+  else:
+     print('Impossível dividir por zero')
+elif escolha == 'a':
+      result=digite_um_numero+digite_mais_um
+      print(f'Resultado',{result})
+elif escolha == 's':
+  result=digite_um_numero-digite_mais_um
+  print(f'Resultado',{result})
+else:
+  print('Por favor escolha uma letra entre m,d,a,s')
